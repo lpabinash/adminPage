@@ -14,7 +14,7 @@ export class Users extends Component {
     }
    
     
-      removeProduct = (pos,e) => {
+      remove = (pos,e) => {
         e.preventDefault();
 
         const mArr = this.state.persons;
@@ -45,18 +45,14 @@ export class Users extends Component {
             return (
                 <tr key={pos+1} className={classes.mainRow}>
                 <Link to="/EditUser" className={classes.underline} onClick={(e)=>this.handlepos(pos,e)} >
-                    {/* <td >
-                        <label >
-                            <input className={classes.input} type="checkbox" />
-                        </label>
-                    </td> */}
+                   
                     <td className={classes.id}>{item.id}</td>
-                    <td className={classes.productname} >{item.name}</td>
-                    {/* <td className={classes.productsold}>{item.address}</td> */}
-                    <td className={classes.productstock}>{item.email}</td>
-                    <td className={classes.productexpire}>{item.phone}</td>
+                    <td className={classes.name} >{item.name}</td>
+                  
+                    <td className={classes.stock}>{item.email}</td>
+                    <td className={classes.expire}>{item.phone}</td>
                     <td className={classes.deleteIcon}>
-                        <a href='/' onClick={(e)=>this.removeProduct(pos,e)} >
+                        <a href='/' onClick={(e)=>this.remove(pos,e)} >
                             <i className="far fa-trash-alt"></i>
                         </a>
                     </td>
@@ -74,12 +70,12 @@ export class Users extends Component {
                         </label>
                     </td> */}
                     <td className={classes.id}>{item.id}</td>
-                    <td className={classes.productname} >{item.name}</td>
-                    {/* <td className={classes.productsold}>{item.address}</td> */}
-                    <td className={classes.productstock}>{item.email}</td>
-                    <td className={classes.productexpire}>{item.phone}</td>
+                    <td className={classes.name} >{item.name}</td>
+                    {/* <td className={classes.sold}>{item.address}</td> */}
+                    <td className={classes.stock}>{item.email}</td>
+                    <td className={classes.expire}>{item.phone}</td>
                     <td className={classes.deleteIcon}>
-                        <a href='/' onClick={(e)=>this.removeProduct(pos,e)} >
+                        <a href='/' onClick={(e)=>this.remove(pos,e)} >
                             <i className="far fa-trash-alt"></i>
                         </a>
                     </td>
@@ -115,7 +111,7 @@ export class Users extends Component {
                     
                     <div className={classes.btnWrapper}>
                     {/* <button  className={classes.btn}>
-                        Add new product
+                        Add new 
                     </button> */}
                     <Link to="/AddUser" className={classes.btn}>Create User</Link>
                     <CSVLink data={csvData} className={classes.btn}>Download me</CSVLink>;

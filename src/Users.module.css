@@ -1,9 +1,4 @@
-.product{
-    margin-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    /* background-color: red; */
-}
+
 
 
 .table th{
@@ -11,13 +6,13 @@
 }
 
 
-.productwrapper{
+.wrapper{
     min-height: 350px;
     /* padding: 40px; */
     box-shadow: 1px 1px 5px 0 #455c71;
     background-color: #435c70;
 }
-.producttable{
+.table{
     max-height: 435px;
     overflow-y: scroll;
     overflow-x: auto;
